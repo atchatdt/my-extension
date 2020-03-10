@@ -1,24 +1,33 @@
 {
+  // mặc dịnh
   "manifest_version": 2,
+  // Tên
   "name": "Getting Started Example",
+  // Phiên bản
   "version": "1.0",
+  // Một số mô tả
   "description": "Build an Extension!",
+  // icon
   "icons": {
     "128": "icon128.png",
     "48": "icon48.png",
     "16": "icon16.png"
   },
+  // Phần action, popup khi click
   "browser_action": {
     "default_popup": "popup.html",
     "default_icon": {
       "16": "icon128.png"
     }
   },
+  // Khai báo trang background
   "background": {
     "scripts": ["background.js"],
     "persistent": false
   },
+  // Mở trang mới
   "options_page": "options.html",
 
+  // Khai báo quyền hạn
   "permissions": ["storage", "notifications", "contextMenus"]
 }
