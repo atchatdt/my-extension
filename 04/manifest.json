@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "Search",
+  "version": "4.0",
+  "description": "Search with wiki",
+  "icons": {
+    "128": "icon128.png",
+    "48": "icon48.png",
+    "16": "icon16.png"
+  },
+  "background": {
+    "scripts": ["eventpage.js"],
+    "persistent": false
+  },
+  "permissions": ["tabs", "contextMenus"]
+}
