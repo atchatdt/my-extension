@@ -1,7 +1,7 @@
 var currentTab;
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-  if (request.todo == 'showPageAction') {
+  if (request == 'showPageAction') {
     chrome.tabs.query(
         {currentWindow: true, active: true},
         function(tabArray) {
