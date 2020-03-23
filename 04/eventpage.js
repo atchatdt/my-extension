@@ -12,7 +12,8 @@ function fixedEncodeURI(str){
 
 chrome.contextMenus.onClicked.addListener(function(clickData){
     if(clickData.menuItemId == "search" && clickData.selectionText){
-        let urlWiki = "https://vi.wikipedia.org/wiki/" + fixedEncodeURI(clickData.selectionText)
+        // let urlWiki = "https://vi.wikipedia.org/wiki/" + fixedEncodeURI(clickData.selectionText)
+        let urlWiki = "https://www.google.com/search?q=" + fixedEncodeURI(clickData.selectionText)
         let createData = {
             "url":urlWiki,
             "type":"popup",
