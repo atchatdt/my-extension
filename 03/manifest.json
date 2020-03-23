@@ -1,16 +1,34 @@
 {
     "manifest_version": 2,
-    "name": "pageFrontStyle Extension",
+    "name": "PageFontStyle Extention",
     "version": "3.0",
-    "description": "Change font style on a precifix page",
-    "icons":{
-        "128": "icon128.png",
-        "48": "icon48.png",
-        "16": "icon16.png"
+    "description": "Build an Extension!",
+    "icons": {
+      "128": "icon128.png",
+      "48": "icon48.png",
+      "16": "icon16.png"
     },
-    "browser_action":{
-        "default_icon":"icon16.png",
-        "defaule_popup": "popup.html",
-        "default_title":"PageFontStyle"
-    }
-}
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon128.png"
+      },
+      "default_title":"Page font style :D"
+    },
+    "background": {
+      "scripts": ["eventpage.js"],
+      "persistent": true
+    },
+    "content_scripts":[
+      {
+        "matches":["https://developer.chrome.com/*"],
+        "js":["content.js","jquery-3.4.1.min.js"],
+        "css":["content.css"]
+      }
+    ],
+    "permissions":[
+      "tabs",
+      "https://developer.chrome.com/*"
+    ]
+  }
+  

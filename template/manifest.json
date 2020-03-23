@@ -1,15 +1,20 @@
 {
     "manifest_version": 2,
-    "name": "Budget Manager",
+    "name": "Getting Started Example",
     "version": "1.0",
-    "description": "this extention tracks your",
-    "icons":{
-        "128": "icon128.png",
-        "48": "icon48.png",
-        "16": "icon16.png"
+    "description": "Build an Extension!",
+    "icons": {
+      "128": "icon128.png",
+      "48": "icon48.png",
+      "16": "icon16.png"
     },
-    "browser_action":{
-        "default_icon":"icon16.png",
-        "defaule_popup": "popup.html"
-    }
-}
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon128.png"
+      }
+    },
+  
+    "permissions": ["storage", "notifications", "contextMenus"]
+  }
+  
